@@ -6,6 +6,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+.container_all{
+  margin: 2em auto;
+  padding: 2em;
+}
 
 body {
   font-family: "Roboto", sans-serif;
@@ -65,14 +69,22 @@ header h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #000;
+  max-width: 600px;
 }
 /* start css overlay */
+.img_hero img {
+  width: 100%;
+}
+.img_hero{
+  max-width: 100%;
+}
+
 #overlay {
   width: 90%;
   padding: 0 10px;
-  background-color: #000;
   color: #fff;
-  max-width: 400px;
+  min-width: 320px;
 }
 
 #overlay h2 {
@@ -140,7 +152,7 @@ header h1 {
     justify-content: center;
     max-width: 700px;
     width: 80%;
-    margin: 30px auto;
+    /* margin: 2em auto; */
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
     grid: gap 10px;
@@ -149,25 +161,88 @@ header h1 {
 
 /* section 4 css blog */
 /* ////////// */
-#blog {
-  background-color: #f9d404d5;
-  padding-top: 2rem;
+.container_blog{
+ display: flex;
+ /* flex-grow: 1; */
+ flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: center;
+ 
 }
-.container_blog {
+
+.container_blog div {
+  max-width: 400px;
+  padding-bottom: 1rem;
+}
+
+.container_blog div img {
+  width: 100%;
+}
+.content p {
+  margin-bottom: 2rem;
+}
+/* section 6 */
+.btn_content{
+  text-align: center;
+  padding: 1.2rem;
+  width: 20rem;
+}
+
+.container_p{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  max-width: 100%;
+}
+/* section 7 */
+.container_disc {
   text-align: center;
 }
 
-.container_blog span {
-    font-weight: 700;
-    font-size: 1.2rem;
-    text-transform: uppercase;
+.img_box {
+  position: relative;
+  display: inline-block;
 }
+
+.img_box img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem;
+}
+/* overlay left full screen */
+.overlay_l {
+  position: absolute;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  opacity: 0.6;
+  color: #000;
+  padding: 10px;
+  font-size: 1rem;
+}
+/* overlay rigth full screen */
+.overlay_r {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  opacity: 0.6;
+  color: #000;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+
 
 @media only screen and (min-width: 550px) {
   header nav {
     position: static;
     background-color: transparent;
-    padding: 20;
     opacity: 1;
   }
   header nav ul {
